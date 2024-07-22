@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conways game of life</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>Conways game of life</header>
+    <main>
+        <div class="game_controls">
+            <button id="reset" class="button">Reset</button>
+            <button id="play" class="button">Play</button>
+            <button id="stop" class="button">Stop</button>
+            <div class="slidecontainer">
+                <span>Speed:</span>
+                <input type="range" min="0" max="100" value="50" class="slider" id="speed">
+            </div>
+            <button id="export" class="button">Export</button>
+            <button id="import" class="button">Import</button>
+        </div>
+        <div class="game_board"></div>
+    </main>
+    
+</body>
+</html>
