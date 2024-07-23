@@ -16,20 +16,28 @@ body header {
 }
 body main {
   margin-top: 5px;
-  display: grid;
-  grid-template-columns: 10% auto;
+  display: flex;
+  flex-direction: column;
 }
 body main .game_controls {
+  margin-top: 5px;
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
 }
 body main .game_controls .button {
-  width: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5px;
+  padding: 5px 10px;
 }
 body main .game_controls .button:hover {
   cursor: pointer;
 }
 body main .game_controls .slidecontainer {
   display: flex;
+  align-items: center;
 }
 body main .game_controls .slidecontainer span {
   margin-right: 5px;
@@ -47,5 +55,42 @@ body main .game_board a {
 }
 body main .game_board a:hover {
   cursor: pointer;
+}
+body .backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.712);
+  display: none;
+  z-index: 5;
+}
+body .backdrop:hover {
+  cursor: pointer;
+}
+body .backdrop .lexicon {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%);
+  padding: 10px 40px;
+  border-radius: 10px;
+  z-index: 10;
+}
+body .backdrop .lexicon .lexicon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+body .backdrop .lexicon .lexicon-item .lexicon-item-header {
+  margin-bottom: 5px;
+}
+body .backdrop .lexicon .lexicon-item .lexicon-item-img {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=index.css.map */

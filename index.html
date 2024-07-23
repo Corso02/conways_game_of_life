@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conways game of life</title>
+    <script src="./levels.js" defer></script>
     <script src="./index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <header>Conways game of life</header>
     <main>
+        <div class="game_board"></div>
         <div class="game_controls">
             <button id="reset" class="button">Reset</button>
             <button id="play" class="button">Play</button>
@@ -20,8 +23,47 @@
             </div>
             <button id="export" class="button">Export</button>
             <button id="import" class="button">Import</button>
+            <button id="prefab" class="button">Select Level</button>
         </div>
-        <div class="game_board"></div>
+        <div class="backdrop">
+            <div class="lexicon">
+                <!-- <div class="lexicon-item">
+                    <div class="lexicom-item-header">
+                        <p class="lexicon-item-text">Text, akoze nazov</p>
+                    </div>
+                    <img src="./imgs/3.png" alt="" class="lexicon-item-img">
+                    <button class="button">Use</button>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicom-item-header">
+                        <p class="lexicon-item-text">Text, akoze nazov</p>
+                    </div>
+                    <img src="./imgs/3.png" alt="" class="lexicon-item-img">
+                    <button class="button">Use</button>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicom-item-header">
+                        <p class="lexicon-item-text">Text, akoze nazov</p>
+                    </div>
+                    <img src="./imgs/3.png" alt="" class="lexicon-item-img">
+                    <button class="button">Use</button>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicom-item-header">
+                        <p class="lexicon-item-text">Text, akoze nazov</p>
+                    </div>
+                    <img src="./imgs/3.png" alt="" class="lexicon-item-img">
+                    <button class="button">Use</button>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicom-item-header">
+                        <p class="lexicon-item-text">Text, akoze nazov</p>
+                    </div>
+                    <img src="./imgs/3.png" alt="" class="lexicon-item-img">
+                    <button class="button">Use</button>
+                </div> -->
+            </div>
+        </div>
     </main>
     
 </body>

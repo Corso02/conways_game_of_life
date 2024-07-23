@@ -15,18 +15,24 @@ body{
     }
     main{
         margin-top: 5px;
-        display: grid;
-        grid-template-columns: 10% auto;
+        display: flex;
+        flex-direction: column;
         .game_controls{
+            margin-top: 5px;
             margin-left: 10px;
+            display: flex;
+            justify-content: center;
             .button{
-                width: 2.5rem;
+                width: fit-content;
+                margin: 5px;
+                padding: 5px 10px;
                 &:hover{
                     cursor: pointer;
                 }
             }
             .slidecontainer{
                 display: flex;
+                align-items: center;
                 span{
                     margin-right: 5px;
                 }
@@ -46,6 +52,44 @@ body{
                     cursor: pointer;
                 }
             }
+        }
+    }
+    .backdrop{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(128, 128, 128, 0.712);
+        display: none;
+        &:hover{
+            cursor: pointer;
+        }
+        z-index: 5;
+        .lexicon{
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translateY(-50%) translateX(50%);
+            padding: 10px 40px;
+            border-radius: 10px;
+            z-index: 10;
+            .lexicon-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px;
+                .lexicon-item-header{
+                    margin-bottom: 5px;
+                }
+                .lexicon-item-img{
+                    width: 200px;
+                    height: 100px;
+                    margin-bottom: 5px;
+                }
+            }
+            
         }
     }
 }
