@@ -59,15 +59,11 @@ class Board{
         }
     }
     reset(){
+        if(this.run) this.run = false
         this.copy(false)
         this.wrapper.innerHTML = ""
         this.render()
         this.updateCells()
-        /*for(let row of this.board){
-            for(let cell of row){
-                cell.reset()
-            }
-        }*/
     }
     async play(){
         if(this.checkForActiveCells() && !this.run){
@@ -168,6 +164,13 @@ class Board{
             this.initialBoard = this.board.map(row => row.map(cell => new Tile(cell.active)))
         }
     }
+    clear(){
+         for(let row of this.board){
+            for(let cell of row){
+                cell.reset()
+            }
+        }
+    }
 }
 
 async function importFile(boardRef){
@@ -243,5 +246,6 @@ document.getElementById("prefab").addEventListener("click", () => importPrefab(b
 document.getElementsByClassName("backdrop")[0].addEventListener("click", (e) => {
     if(e.target.className === "backdrop") e.target.style.display = "none"
 })
+document.getElementById("clear").addEventListener("click", () => board.clear())
 
 generateLexicon(board)
